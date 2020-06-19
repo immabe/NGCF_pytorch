@@ -239,7 +239,7 @@ if __name__ == '__main__':
                 print('Saving model at %s' % pretrain_path)
                 torch.save(model.state_dict(), pretrain_path)
         cur_best_pre_0, stopping_step, should_stop = early_stopping(ret['recall'][0], cur_best_pre_0,
-                                                                    stopping_step, expected_order='acc', flag_step=5)
+                                                                    stopping_step, expected_order='acc', flag_step=50)
 
         # *********************************************************
         # early stopping when cur_best_pre_0 is decreasing for ten successive steps.

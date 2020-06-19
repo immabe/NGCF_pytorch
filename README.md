@@ -18,12 +18,12 @@ The code has been tested running under Python 3.6.10. The required packages are 
 The instruction of commands has been clearly stated in the codes (see the parser function in NGCF/utility/parser.py).
 * Gowalla dataset
 ```
-python NGCF.py --dataset gowalla --regs [1e-5] --embed_size 64 --layer_size [64,64,64] --lr 0.0001 --save_flag 1 --pretrain 0 --batch_size 1024 --epoch 400 --verbose 1 --node_dropout [0.1] --mess_dropout [0.1,0.1,0.1]
+python NGCF_pytorch.py --dataset gowalla --regs [1e-5] --embed_size 64 --layer_size [64,64,64] --lr 0.0001 --save_flag 1 --pretrain 0 --batch_size 1024 --epoch 400 --verbose 1 --node_dropout [0.1] --mess_dropout [0.1,0.1,0.1]
 ```
 
 * Amazon-book dataset
 ```
-python NGCF.py --dataset amazon-book --regs [1e-5] --embed_size 64 --layer_size [64,64,64] --lr 0.0005 --save_flag 1 --pretrain 0 --batch_size 1024 --epoch 200 --verbose 50 --node_dropout [0.1] --mess_dropout [0.1,0.1,0.1]
+python NGCF_pytorch.py --dataset amazon-book --regs [1e-5] --embed_size 64 --layer_size [64,64,64] --lr 0.0005 --save_flag 1 --pretrain 0 --batch_size 1024 --epoch 200 --verbose 50 --node_dropout [0.1] --mess_dropout [0.1,0.1,0.1]
 ```
 Some important arguments:
 * `alg_type`
@@ -49,7 +49,9 @@ Some important arguments:
   * It indicates the message dropout ratio, which randomly drops out the outgoing messages. Usage `--mess_dropout [0.1,0.1,0.1]`.
 
 ## Dataset
-We provide two processed datasets: Gowalla and Amazon-book.
+Author provides two processed datasets: Gowalla and Amazon-book.
+You can find it at [here](https://github.com/xiangwang1223/neural_graph_collaborative_filtering)
+
 * `train.txt`
   * Train file.
   * Each line is a user with her/his positive interactions with items: userID\t a list of itemID\n.
@@ -66,7 +68,3 @@ We provide two processed datasets: Gowalla and Amazon-book.
 * `item_list.txt`
   * Item file.
   * Each line is a triplet (org_id, remap_id) for one item, where org_id and remap_id represent the ID of the item in the original and our datasets, respectively.
-
-## Acknowledgement
-
-This research is supported by the National Research Foundation, Singapore under its International Research Centres in Singapore Funding Initiative. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not reflect the views of National Research Foundation, Singapore.
