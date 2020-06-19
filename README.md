@@ -1,36 +1,18 @@
 # Neural Graph Collaborative Filtering
-This is our Tensorflow implementation for the paper:
+This is my Pytorch implementation for the paper:
 
 >Xiang Wang, Xiangnan He, Meng Wang, Fuli Feng, and Tat-Seng Chua (2019). Neural Graph Collaborative Filtering, [Paper in ACM DL](https://dl.acm.org/citation.cfm?doid=3331184.3331267) or [Paper in arXiv](https://arxiv.org/abs/1905.08108). In SIGIR'19, Paris, France, July 21-25, 2019.
 
-Author: Dr. Xiang Wang (xiangwang at u.nus.edu)
+The author's tensorflow implementation is [here](https://github.com/xiangwang1223/neural_graph_collaborative_filtering)
 
-## Introduction
-Neural Graph Collaborative Filtering (NGCF) is a new recommendation framework based on graph neural network, explicitly encoding the collaborative signal in the form of high-order connectivities in user-item bipartite graph by performing embedding propagation.
 
-## Citation 
-If you want to use our codes and datasets in your research, please cite:
-```
-@inproceedings{NGCF19,
-  author    = {Xiang Wang and
-               Xiangnan He and
-               Meng Wang and
-               Fuli Feng and
-               Tat{-}Seng Chua},
-  title     = {Neural Graph Collaborative Filtering},
-  booktitle = {Proceedings of the 42nd International {ACM} {SIGIR} Conference on
-               Research and Development in Information Retrieval, {SIGIR} 2019, Paris,
-               France, July 21-25, 2019.},
-  pages     = {165--174},
-  year      = {2019},
-}
-```
 ## Environment Requirement
-The code has been tested running under Python 3.6.5. The required packages are as follows:
-* tensorflow == 1.8.0
-* numpy == 1.14.3
-* scipy == 1.1.0
-* sklearn == 0.19.1
+The code has been tested running under Python 3.6.10. The required packages are as follows:
+* pytorch == 1.5.0
+* numpy == 1.18.1
+* scipy == 1.4.1
+* sklearn == 0.22.1
+* tqdm == 4.45.0
 
 ## Example to Run the Codes
 The instruction of commands has been clearly stated in the codes (see the parser function in NGCF/utility/parser.py).
