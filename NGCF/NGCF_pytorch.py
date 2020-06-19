@@ -34,7 +34,7 @@ class NGCF(nn.Module):
         self.emb_dim = args.embed_size
         self.batch_size = args.batch_size
 
-        self.weight_size = args.layer_size
+        self.weight_size = eval(args.layer_size)
         self.n_layers = len(self.weight_size)
 
         self.model_type += '_%s_%s_l%d' % (self.adj_type, self.alg_type, self.n_layers)
